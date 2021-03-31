@@ -240,10 +240,13 @@ def add_tasks(batch_service_client, job_id, input_files, output_container_sas_ur
     for idx, input_file in enumerate(input_files):
         input_file_path = input_file.file_path
         input_file_path = "".join((input_file_path).split('.')[:-1]) + '.txt'
-
+        print('Input_file_path: {} ...'.format(input_file_path))
         with open (input_file_path, "r") as myfile:
             data=myfile.readlines()
-        command = "/bin/bash -c \"ffmpeg -i {} \"".format(
+
+        print('ffmpeg command: {} ...'.format(data))
+
+        command = "/bin/bash -c \"{} \"".format(
             data)
         tasks.append(batch.models.TaskAddParameter(
             id='Task{}'.format(idx),
