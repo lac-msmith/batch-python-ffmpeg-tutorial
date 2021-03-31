@@ -19,11 +19,11 @@
 # unique to your accounts. These are used when constructing connection strings
 # for the Batch and Storage client objects.
 
-_BATCH_ACCOUNT_NAME = ''
-_BATCH_ACCOUNT_KEY = ''
-_BATCH_ACCOUNT_URL = ''
-_STORAGE_ACCOUNT_NAME = ''
-_STORAGE_ACCOUNT_KEY = ''
+_BATCH_ACCOUNT_NAME = 'byc'
+_BATCH_ACCOUNT_KEY = 'cK37SzKrxCu24jRidvfCULRsrYp3OQu9AhClHCqKmi0bkemimooCy+snwtrckPoEVKJfBDDGGJSHrprvGgPBDQ=='
+_BATCH_ACCOUNT_URL = 'https://byc.westus.batch.azure.com'
+_STORAGE_ACCOUNT_NAME = 'videoprocessing'
+_STORAGE_ACCOUNT_KEY = '/s7+i6U356P6c06+Ed20sw0vw13i+tRE3qZ+Z0vc4P2N9P2YqpW3MbdKlIow0L6a3ShY737hBJ0mcjFBqigGZQ=='
 _POOL_ID = 'LinuxFfmpegPool'
 _DEDICATED_POOL_NODE_COUNT = 0
 _LOW_PRIORITY_POOL_NODE_COUNT = 5
