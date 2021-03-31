@@ -321,6 +321,21 @@ if __name__ == '__main__':
     print('Container [{}] created.'.format(input_container_name))
     print('Container [{}] created.'.format(output_container_name))
 
+    # Create a list of all txt files in the InputFiles directory.
+    input_txt_file_paths = []
+
+    for folder, subs, files in os.walk(os.path.join(sys.path[0], 'InputFiles')):
+        for filename in files:
+            if filename.lower().endswith(".txt"):
+                input_txt_file_paths.append(os.path.abspath(
+                    os.path.join(folder, filename)))
+
+    # Upload the input files. This is the collection of files that are to be processed by the tasks.
+    input_files = [
+        upload_file_to_container(blob_client, input_container_name, file_path)
+        for file_path in input_txt_file_paths]
+
+
     # Create a list of all MP4 files in the InputFiles directory.
     input_file_paths = []
 
