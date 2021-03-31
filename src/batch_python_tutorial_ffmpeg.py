@@ -326,7 +326,7 @@ if __name__ == '__main__':
 
     for folder, subs, files in os.walk(os.path.join(sys.path[0], 'InputFiles')):
         for filename in files:
-            if filename.endswith(".mp4"):
+            if filename.lower().endswith(".mp4"):
                 input_file_paths.append(os.path.abspath(
                     os.path.join(folder, filename)))
 
